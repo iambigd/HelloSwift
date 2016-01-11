@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rG3-xY-H3g">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Tab-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,6 +23,7 @@
                                 <state key="normal" title="Click Me"/>
                                 <connections>
                                     <action selector="clickMeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r4t-8i-Wnq"/>
+                                    <segue destination="uqh-LM-uaq" kind="show" id="Gmq-rs-yJU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CLICK MSG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ8-Sq-7Zb">
@@ -40,11 +41,60 @@
                             <constraint firstItem="KBa-6H-Mpe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yao-Dl-EiC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="First Tab" id="q01-lU-nPL"/>
                     <connections>
                         <outlet property="displayLbl" destination="BJ8-Sq-7Zb" id="tT9-bq-GE8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="164"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EGk-Ah-fQm">
+            <objects>
+                <viewController id="uqh-LM-uaq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ufc-9y-r5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="IIY-E7-UVq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Osh-Gl-RTp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello Tab2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7W-6z-AM3">
+                                <rect key="frame" x="262" y="280" width="106" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j7W-6z-AM3" firstAttribute="centerY" secondItem="Osh-Gl-RTp" secondAttribute="centerY" id="MTf-Vu-CZh"/>
+                            <constraint firstItem="j7W-6z-AM3" firstAttribute="centerX" secondItem="Osh-Gl-RTp" secondAttribute="centerX" id="j80-0j-t89"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIL-HC-LJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="194"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WLb-qf-lFz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rG3-xY-H3g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v92-fc-ecZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="91f-BX-wkA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kkx-sI-cpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="164"/>
         </scene>
