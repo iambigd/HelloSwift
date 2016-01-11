@@ -10,16 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+    @IBOutlet var displayLbl: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("Hello world");
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
-
+    @IBAction func clickMeBtn(sender: UIButton){
+         print("click me");
+         displayLbl.text = "Hello SWIFT";
+    }
 }
 
